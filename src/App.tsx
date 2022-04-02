@@ -9,8 +9,8 @@ import {
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
 
-import { ThemeProvider } from "styled-components/native";
-import themes from "./themes";
+import { ThemeProvider, useTheme } from "styled-components/native";
+import { theme } from "./theme";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -24,10 +24,16 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={themes}>
-      <View>
+    <ThemeProvider theme={theme}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Text>Its Works</Text>
-        <StatusBar style="auto" />
+        <StatusBar style="light" networkActivityIndicatorVisible />
       </View>
     </ThemeProvider>
   );
