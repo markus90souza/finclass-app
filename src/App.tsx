@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import AppLoading from "expo-app-loading";
 import {
   useFonts,
@@ -11,6 +11,8 @@ import {
 
 import { ThemeProvider, useTheme } from "styled-components/native";
 import { theme } from "./theme";
+import { colors } from "./theme/colors";
+import { Text } from "./components/Text";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -30,6 +32,8 @@ export default function App() {
           flex: 1,
           justifyContent: "center",
           alignItems: "center",
+
+          backgroundColor: colors.brand01,
         }}
       >
         <Text>Its Works</Text>
