@@ -9,12 +9,13 @@ import {
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
 
-import { ThemeProvider, useTheme } from "styled-components/native";
+import { ThemeProvider } from "styled-components/native";
 import { theme } from "./theme";
 import { colors } from "./theme/colors";
 import { Text } from "./components/Text";
 import { Button } from "./components/Button";
 import { Separator } from "./components/Separator";
+import { BackButton } from "./components/BackButton";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -39,9 +40,10 @@ export default function App() {
         }}
       >
         <Text>Its Works</Text>
-
         <Separator height={20} />
         <Button typography="bold" title="Press Me" />
+        <Separator height={20} />
+        <BackButton />
         <StatusBar style="light" networkActivityIndicatorVisible />
       </View>
     </ThemeProvider>
