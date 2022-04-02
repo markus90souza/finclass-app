@@ -13,6 +13,8 @@ import { ThemeProvider, useTheme } from "styled-components/native";
 import { theme } from "./theme";
 import { colors } from "./theme/colors";
 import { Text } from "./components/Text";
+import { Button } from "./components/Button";
+import { Separator } from "./components/Separator";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -33,10 +35,13 @@ export default function App() {
           justifyContent: "center",
           alignItems: "center",
 
-          backgroundColor: colors.brand01,
+          backgroundColor: colors.neutralDarktest,
         }}
       >
         <Text>Its Works</Text>
+
+        <Separator height={20} />
+        <Button title="Press Me" />
         <StatusBar style="light" networkActivityIndicatorVisible />
       </View>
     </ThemeProvider>
