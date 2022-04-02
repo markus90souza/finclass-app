@@ -41,7 +41,7 @@ export default function App() {
         <Text>Its Works</Text>
 
         <Separator height={20} />
-        <Button title="Press Me" />
+        <Button typography="bold" title="Press Me" />
         <StatusBar style="light" networkActivityIndicatorVisible />
       </View>
     </ThemeProvider>
