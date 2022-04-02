@@ -16,6 +16,7 @@ import { Text } from "./components/Text";
 import { Button } from "./components/Button";
 import { Separator } from "./components/Separator";
 import { BackButton } from "./components/BackButton";
+import { Dots } from "./components/Dots";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -35,7 +36,6 @@ export default function App() {
           flex: 1,
           justifyContent: "center",
           alignItems: "center",
-
           backgroundColor: colors.neutralDarktest,
         }}
       >
@@ -44,6 +44,8 @@ export default function App() {
         <Button typography="bold" title="Press Me" />
         <Separator height={20} />
         <BackButton />
+        <Separator height={20} />
+        <Dots amount={10} />
         <StatusBar style="light" networkActivityIndicatorVisible />
       </View>
     </ThemeProvider>
