@@ -13,6 +13,7 @@ const Button = ({
   icon,
   outlined,
   textColor,
+  ...rest
 }: Props) => {
   const { colors } = useTheme();
   const titleColor = useMemo(() => {
@@ -27,9 +28,11 @@ const Button = ({
   }, [disabled, outlined, textColor, colors]);
   return (
     <Container
+      onPress={onPress}
       disabled={disabled}
       outlined={outlined || disabled}
       color={color}
+      {...rest}
     >
       {!!icon && (
         <>

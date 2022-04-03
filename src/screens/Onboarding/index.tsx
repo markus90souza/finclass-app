@@ -7,11 +7,15 @@ import emailIcon from "@assets/icons/email.png";
 import { Container, Content, Banner, EmailIcon, ImpactPhrase } from "./styles";
 
 import { useTheme } from "styled-components/native";
+import { useNavigation } from "@react-navigation/native";
 
 const Onboarding = () => {
   const { colors } = useTheme();
+  const { navigate } = useNavigation();
 
-  const handleScreenLogin = () => {};
+  const handleScreenLogin = () => {
+    navigate("Login");
+  };
   return (
     <Container>
       <Banner resizeMode={"contain"} source={banner} />
@@ -20,7 +24,12 @@ const Onboarding = () => {
           {`Aprenda a investir \n conquiste sua liberdade \n financeira`}
         </ImpactPhrase>
         <Separator height={20} />
-        <Button onPress={() => {}} title="Assine agora" />
+        <Button
+          onPress={() => {
+            console.log("eee");
+          }}
+          title="Assine agora"
+        />
         <Separator height={20} />
         <Button
           outlined

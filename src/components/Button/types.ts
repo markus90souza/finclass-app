@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
+import { PressableProps } from "react-native";
 import { TypographyType } from "styled-components";
 
-export interface Props {
+export interface Props extends PressableProps {
   title: string;
   disabled?: boolean;
   outlined?: boolean;
