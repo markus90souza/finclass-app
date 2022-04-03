@@ -30,3 +30,5 @@ export const Title = styled.Text<TitleProps>`
 export const SpacingIcon = styled.View`
   width: 16px;
 `;
+
+export const IconBox = styled.View``;

@@ -7,7 +7,7 @@ export interface Props {
   outlined?: boolean;
   color?: string;
   textColor?: string;
-  typography: TypographyType;
+  typography?: TypographyType;
   icon?: ReactNode;
   onPress: () => void;
 }

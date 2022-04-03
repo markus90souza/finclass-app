@@ -14,8 +14,8 @@ import {
 } from "./styles";
 import { Props } from "./types";
 
-import openEye from "../../assets/icons/openEye.png";
-import closeEye from "../../assets/icons/closeEye.png";
+import openEye from "@assets/icons/openEye.png";
+import closeEye from "@assets/icons/closeEye.png";
 
 const Input = ({
   name,
@@ -63,7 +63,6 @@ const Input = ({
           {...rest}
         />
         {!!rightIcon && <RightIconBox>{rightIcon}</RightIconBox>}
-
         {secureTextEntry && (
           <ToggleEye onPress={() => setShowPassword(!showPassword)}>
             <EyeIcon

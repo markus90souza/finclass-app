@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { Props } from "./types";
 
-import { Container, SpacingIcon, Title } from "./styles";
+import { Container, IconBox, SpacingIcon, Title } from "./styles";
 import { useTheme } from "styled-components/native";
 
 const Button = ({
@@ -27,16 +27,17 @@ const Button = ({
   }, [disabled, outlined, textColor, colors]);
   return (
     <Container
-      onPress={onPress}
       disabled={disabled}
       outlined={outlined || disabled}
       color={color}
     >
       {!!icon && (
         <>
-          {icon} <SpacingIcon />
+          <IconBox>{icon}</IconBox>
+          <SpacingIcon />
         </>
       )}
+
       <Title color={titleColor} type={typography}>
         {title}
       </Title>
