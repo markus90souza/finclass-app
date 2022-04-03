@@ -1,6 +1,7 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { NavigationContainer } from "@react-navigation/native";
+import { ThemeProvider } from "styled-components/native";
 import AppLoading from "expo-app-loading";
 import {
   useFonts,
@@ -9,10 +10,9 @@ import {
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
 
-import { ThemeProvider } from "styled-components/native";
 import { theme } from "./theme";
 
-import { Onboarding } from "@screens/Onboarding";
+import { AuthRoute } from "@routes/Auth.routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,7 +28,9 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style="light" />
-      <Onboarding />
+      <NavigationContainer>
+        <AuthRoute />
+      </NavigationContainer>
     </ThemeProvider>
   );
 }

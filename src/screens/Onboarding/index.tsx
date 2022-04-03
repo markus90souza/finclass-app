@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React from "react";
 
 import { Button } from "@components/Button";
 import { Separator } from "@components/Separator";
@@ -7,7 +7,6 @@ import emailIcon from "@assets/icons/email.png";
 import { Container, Content, Banner, EmailIcon, ImpactPhrase } from "./styles";
 
 import { useTheme } from "styled-components/native";
-import { Pressable } from "react-native";
 
 const Onboarding = () => {
   const { colors } = useTheme();
@@ -20,13 +19,9 @@ const Onboarding = () => {
         <ImpactPhrase type="bold">
           {`Aprenda a investir \n conquiste sua liberdade \n financeira`}
         </ImpactPhrase>
-
         <Separator height={20} />
-
         <Button onPress={() => {}} title="Assine agora" />
-
         <Separator height={20} />
-
         <Button
           outlined
           onPress={handleScreenLogin}
@@ -41,7 +36,6 @@ const Onboarding = () => {
             />
           }
         />
-
         <Separator height={40} />
       </Content>
     </Container>
