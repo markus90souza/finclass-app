@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 import lock from "@assets/icons/lock/icon.png";
 
@@ -13,11 +14,8 @@ import { Text } from "@components/Text";
 import { BackButton } from "@components/BackButton";
 import { Separator } from "@components/Separator";
 import { LoginForm } from "@components/Forms/LoginForm";
-import { useNavigation } from "@react-navigation/native";
 
-interface LoginProps {
-  children: ReactNode;
-}
+interface LoginProps {}
 
 const Login = () => {
   const { goBack } = useNavigation();

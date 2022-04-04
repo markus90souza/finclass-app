@@ -1,8 +1,7 @@
 import React, { useMemo } from "react";
-import { Props } from "./types";
-
-import { Container, IconBox, SpacingIcon, Title } from "./styles";
 import { useTheme } from "styled-components/native";
+import { Container, IconBox, SpacingIcon, Title } from "./styles";
+import { Props } from "./types";
 
 const Button = ({
   title,

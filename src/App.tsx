@@ -10,9 +10,8 @@ import {
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
 
-import { theme } from "./theme";
-
-import { AuthRoute } from "@routes/Auth.routes";
+import { theme } from "@theme/index";
+import { Routes } from "@routes/index";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -29,7 +28,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <StatusBar style="light" />
       <NavigationContainer>
-        <AuthRoute />
+        <Routes />
       </NavigationContainer>
     </ThemeProvider>
   );
