@@ -2,8 +2,6 @@ import React from "react";
 import styled, { useTheme } from "styled-components/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-const { Screen, Navigator, Group } = createBottomTabNavigator();
-
 interface IconProps {
   size: number;
 }
@@ -20,8 +18,15 @@ import {
   boxSearchIcon,
   boxMenuIcon,
 } from "@assets/index";
-import { Onboarding } from "@screens/Onboarding";
+
 import { Text } from "@components/Text";
+
+import { Home } from "@screens/Home";
+import { Downloads } from "@screens/Downloads";
+import { Search } from "@screens/Search";
+import { Menu } from "@screens/Menu";
+
+const { Screen, Navigator, Group } = createBottomTabNavigator();
 
 const AppRoutes = () => {
   const { colors } = useTheme();
@@ -45,7 +50,7 @@ const AppRoutes = () => {
       >
         <Screen
           name="Home"
-          component={Onboarding}
+          component={Home}
           options={{
             title: "Inicio",
             tabBarIcon: ({ size, color }) => (
@@ -67,7 +72,7 @@ const AppRoutes = () => {
 
         <Screen
           name="Downloads"
-          component={Onboarding}
+          component={Downloads}
           options={{
             title: "Downloads",
             tabBarIcon: ({ size, color }) => (
@@ -89,7 +94,7 @@ const AppRoutes = () => {
 
         <Screen
           name="Search"
-          component={Onboarding}
+          component={Search}
           options={{
             title: "Buscar",
             tabBarIcon: ({ size, color }) => (
@@ -111,7 +116,7 @@ const AppRoutes = () => {
 
         <Screen
           name="Menu"
-          component={Onboarding}
+          component={Menu}
           options={{
             title: "Menu",
             tabBarIcon: ({ size, color }) => (
