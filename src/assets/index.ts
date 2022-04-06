@@ -13,6 +13,8 @@ import playIcon from "./icons/play.png";
 import plusIcon from "./icons/plus.png";
 import searchIcon from "./icons/search.png";
 
+import emptyIcon from "./icons/empty/empty-results.png";
+
 export {
   badgeUlrichIcon,
   boxMenuIcon,
@@ -28,4 +30,5 @@ export {
   playIcon,
   plusIcon,
   searchIcon,
+  emptyIcon,
 };
