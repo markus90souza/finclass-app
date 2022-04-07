@@ -7,6 +7,7 @@ import { Separator } from "@components/Separator";
 import { Button } from "@components/Button";
 import { Input } from "@components/Input";
 import { SchemaValidation } from "./validation";
+import { useAuth } from "@hooks/useAuth";
 
 const LoginForm = () => {
   const {
@@ -21,9 +22,12 @@ const LoginForm = () => {
       password: "",
     },
   });
+  const { login } = useAuth();
 
   const _handleSubmit = async () => {
-    await handleSubmit(({ email, password }) => {})();
+    await handleSubmit(({ email, password }) => {
+      login();
+    })();
   };
 
   return (

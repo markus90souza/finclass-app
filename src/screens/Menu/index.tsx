@@ -26,11 +26,13 @@ import {
 } from "@assets/index";
 import { useTheme } from "styled-components/native";
 import { ListTile } from "./ListTile";
+import { useAuth } from "@hooks/useAuth";
 
 interface MenuProps {}
 
 const Menu = ({}: MenuProps) => {
   const { colors } = useTheme();
+  const { logout } = useAuth();
   return (
     <Container>
       <ScrollView>
@@ -127,7 +129,7 @@ const Menu = ({}: MenuProps) => {
         />
 
         <Separator height={30} />
-        <Button title="Sair" typography="bold" outlined onPress={() => {}} />
+        <Button title="Sair" typography="bold" outlined onPress={logout} />
         <Separator height={30} />
 
         <Text size={10} type={"bold"} color={colors.placeholder.main}>

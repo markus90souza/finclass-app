@@ -12,6 +12,7 @@ import {
 
 import { theme } from "@theme/index";
 import { Routes } from "@routes/index";
+import { AuthProvider } from "@contexts/Auth";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,10 +27,12 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar style="light" />
-      <NavigationContainer>
-        <Routes />
-      </NavigationContainer>
+      <AuthProvider>
+        <StatusBar style="light" />
+        <NavigationContainer>
+          <Routes />
+        </NavigationContainer>
+      </AuthProvider>
     </ThemeProvider>
   );
 }

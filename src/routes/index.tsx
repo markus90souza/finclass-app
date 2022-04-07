@@ -1,10 +1,12 @@
+import { useAuth } from "@hooks/useAuth";
 import React from "react";
-import { View } from "react-native";
+
 import { AppRoutes } from "./App.routes";
 import { AuthRoute } from "./Auth.routes";
 
 const Routes = () => {
-  return <AppRoutes />;
+  const { isLogged } = useAuth();
+  return isLogged ? <AppRoutes /> : <AuthRoute />;
 };
 
 export { Routes };
