@@ -14,6 +14,15 @@ import plusIcon from "./icons/plus.png";
 import searchIcon from "./icons/search.png";
 
 import emptyIcon from "./icons/empty/empty-results.png";
+import editIcon from "./icons/edit-profile/edit-profile.png";
+import helpIcon from "./icons/help/help.png";
+import subscriptionIcon from "./icons/subscription/subscription.png";
+import termsIcon from "./icons/terms/terms.png";
+import progressIcon from "./icons/progress/progress.png";
+
+import finbooksIcon from "./icons/finbooks/finbooks.png";
+import finclassesIcon from "./icons/finclasses/finclasses.png";
+import finseriesIcon from "./icons/finseries/finseries.png";
 
 export {
   badgeUlrichIcon,
@@ -31,4 +40,12 @@ export {
   plusIcon,
   searchIcon,
   emptyIcon,
+  editIcon,
+  finbooksIcon,
+  finclassesIcon,
+  finseriesIcon,
+  helpIcon,
+  subscriptionIcon,
+  termsIcon,
+  progressIcon,
 };
